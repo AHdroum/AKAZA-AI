@@ -2,7 +2,7 @@ import datetime
 
 def about():
     print("""
-    FRIDAY v1.0
+    AKAZA v1.0
 
     Created by Ahmed 
     
@@ -11,20 +11,30 @@ def about():
 
 def say_time():
     now = datetime.datetime.now()
-    print(f"FRIDAY: Current time is {now.hour}:{now.minute}")
+    print(f"AKAZA: Current time is {now.hour}:{now.minute}")
 def say_hello():
-    print("friday:hello boss")
+    print("AKAZA: hello boss how i can help you?")
 
 def say_goodbye():
-    print("friday:goodbye boos")
+    print("AKAZA: goodbye boos")
     
 def show_help():
-    print("""
-===== AVAILABLE COMMANDS =====
+    commands = ["hello","bye","time","exit","about","help", "remember"
+                , "whoami"]
+    print("AKAZA: Available commands:")
+    for command in commands:
+        print ("-", command)
 
-hello
-bye
-time
-help
-exit
-""")
+
+def whoami():
+    file = open("user_name.txt","r")
+    name = file.read()
+    file.close()
+    print(f"Your name is {name}")
+
+def remember():
+    name = input("whats is your name?")
+    file = open("user_name.txt","w")
+    file.write(name)
+    file.close()
+    print(f"Nice to meet you, {name}. I will remember that.")

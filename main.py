@@ -1,6 +1,6 @@
 import commands
 
-print ("==== FRIDAY ====")
+print ("       ==== AKAZA ====      ")
 
 
 ##commands.say_hello()
@@ -22,8 +22,15 @@ while True:
 
     elif command == "bye":
         commands.say_goodbye()
+
+    elif command == "remember":
+        commands.remember()
+
+    elif command == "whoami":
+        commands.whoami()
+
     elif command == "exit":
-        print ("FRIDAY SHUTTING DOWN.....")
+        print ("AKAZA SHUTTING DOWN.....")
         break
     else:
         print ("unknow command")
